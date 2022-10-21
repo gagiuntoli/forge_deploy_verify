@@ -4,3 +4,13 @@ out = 'out'
 libs = ['lib']
 
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config
+
+# Can be used with --rpc-url as an alias
+# https://github.com/foundry-rs/foundry/pull/3116
+[rpc_endpoints]
+mumbai = "https://polygon-mumbai.g.alchemy.com/v2/${ALCHEMY_API_KEY}"
+anvil = "http://127.0.0.1:8545"
+
+[etherscan]
+mainnet = { key = "${ETHERSCAN_API_KEY}" }
+mumbai = { key = "${POLYSCAN_API_KEY}", chain = 80001, url = "https://api-testnet.polygonscan.com/" }
